@@ -1,0 +1,23 @@
+
+<html>
+    <body onload="getUserList();">
+       
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Email ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let people of listOfUsers; let i = index">
+                    <td>{{i+1}}</td>
+                    <td><a [routerLink] = "['/view', people._id]">{{ people._id }}</a></td>
+                    <td>{{people.userName}}</td>
+                    <td>{{people.emailID}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

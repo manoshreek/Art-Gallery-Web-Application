@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Creative envelope hover effect using HTML and CSS3</title>
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		</head>
+
+    <body class="container-fluid text-white bg-dark">
+        <div class="row">
+        <div class="col-md-6" style="padding: 10px;">
+			<a class="btn btn-dark" [routerLink]="['']">
+				<svg xmlns="http://www.w3.org/2000/svg" width="50px" height="38px" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+					<path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+				</svg>
+			</a>
+			<div *ngIf = "success;">
+				<div class="alert alert-success alert-dismissible " role="alert" style="margin-left: 150px;margin-top: 0px; width:300px; height: 70px;">
+					
+					<h2 class="alert-heading "><strong>Success! </strong>E-mail sent successfully!</h2>
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
+			</div>
+            <div id="form-wrap" class="roll-in-blurred-left">
+                <form #contactForm = "ngForm" (ngSubmit) = "sendEmail(contactForm)">
+                    <p style="color: rgb(49, 38, 38);">Hello Mano,</p>
+                    <label for="message">Message</label>
+                    <textarea rows="4" cols="50" class="form-control" id="message" name="message" [(ngModel)] = "message" required>
+                    </textarea>
+        
+                    <p style="color: rgb(49, 38, 38);">Best, </p>
+                    <label for="fName">First Name</label>
+                    <input type="text" class="form-control" id="fName" name="fName" [(ngModel)] = "fName" required>
+        
+                    <label for="lName">Last Name</label>
+                    <input type="text" class="form-control" id="lName" name="lName" [(ngModel)] = "lName" required>
+        
+                    <label for="emailID">Email ID</label>
+                    <input type="email" class="form-control" id="emailID" name="emailID" [(ngModel)] = "emailID" required>
+					
+                    <br>
+                    <input type="submit" value="Send Mail" name="submit" [disabled] = "!contactForm.valid">
+					
+                </form>
+				
+            </div>
+			
+        </div>
+        <div class="col-md-3">
+			<img width="400px" height="auto" class="slide-in-top" src="../../assets/c1 pic.png" alt=""><br><br>
+			<img class="bounce-in-top" width="470px" style="margin: 20px;" height="auto" src="../../assets/board 2.png" alt="">
+        </div>
+		<div class="col-md-3">
+			<img class="imgSignal slide-in-top2" src="../../assets/signal2.png" alt="">
+			<div class="signal slide-in-top2">
+				<a class="glowClass insta" href="https://www.instagram.com/manoshreek/?hl=en"> <i class="fab fa-instagram"></i></a>
+				<a class="glowClass fb" href="https://www.facebook.com/profile.php?id=100041908583570&mibextid=ZbWKwL"> <i class="fab fa-facebook-f"></i></a>
+				<a class="glowClass whatsapp" href="https://web.whatsapp.com/"> <i class="fab fa-whatsapp"></i></a>
+			</div>
+		</div>
+    	</div>
+		
+    </body>
+</html>

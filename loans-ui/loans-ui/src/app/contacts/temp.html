@@ -1,0 +1,24 @@
+<div  id="wrap">
+    <h1>SEND A MESSAGE</h1>
+    <br><br><br>
+    <div id="form-wrap" class="container">
+        <form>
+            <p>Hello Mano,</p>
+            <label for="message" class="text-white">Message</label>
+            <textarea rows="4" cols="50" class="form-control" id="message" name="message" [(ngModel)] = "message">
+            </textarea>
+
+            <p>Best, </p>
+            <label for="fName" class="text-white">First Name</label>
+            <input type="text" class="form-control" id="fName" name="fName" [(ngModel)] = "fName">
+
+            <label for="lName" class="text-white">Last Name</label>
+            <input type="text" class="form-control" id="lName" name="lName" [(ngModel)] = "lName">
+
+            <label for="emailID" class="text-white">Email ID</label>
+            <input type="email" class="form-control" id="emailID" name="emailID" [(ngModel)] = "emailID">
+            <br>
+            <input type="submit" value="Thank You!" name="submit">
+        </form>
+    </div>
+</div>

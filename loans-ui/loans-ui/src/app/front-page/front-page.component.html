@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  </head>
+  <body class="container-fluid text-white bg-dark">
+    
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+      <a class="navbar-brand glowClass" [routerLink]="['']"> <i class="fab fa-sketch"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-item nav-link" active [routerLink]="['/about']">About</a>
+          <a class="nav-item nav-link" [routerLink]="['/view-art']">My Works</a>
+          <a class="nav-item nav-link" [routerLink]="['/contacts']">Contact</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-bs-haspopup="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+              </svg>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" [routerLink]="['/login']"><img src="../../assets/box-arrow-in-right.svg" height="27px" width="auto" alt=""><span style="padding-left: 20px; font-size: 20px;">Login</span> </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" [routerLink]="['/signup']"><img src="../../assets/person-add.svg" height="27px" width="auto" alt=""><span style="padding-left: 20px; font-size: 20px;">Signup</span> </a>
+            </div>
+          </li>
+        </div>
+      </div>
+    </nav>
+
+    <div id="mainContent" class="row">
+      <div class="col-md-5">
+        <div class="jumbotron">
+          <div style="font-family:Bahnschrift; font-size: 70px; color: rgb(236, 236, 198);" >THE ART OF PENCIL</div>
+          <p class="lead">
+            <a  style="font-size: 30px;" class="btn btn-outline-secondary wobble-hor-bottom" [routerLink]="['/view-art']" role="button">View more</a>
+          </p>
+        </div>
+      </div>                     
+      <div class="col-md-7" style=" overflow: hidden;">
+        <img src="../../assets/Infosys feature/BG.png" width="700px" height="420px" class=" zoom" alt="">
+      </div>
+    </div>
+  </body>
+</html>

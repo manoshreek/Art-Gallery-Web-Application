@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Creative envelope hover effect using HTML and CSS3</title>
+    </head>
+
+    <body class="container-fluid text-white bg-dark">
+        <h1>SEND A MESSAGE</h1>
+            <br><br><br>
+        <div class="row">
+        <div class="col-md-6">
+            <div id="form-wrap">
+                <form>
+                    <p>Hello Mano,</p>
+                    <label for="message" class="text-white">Message</label>
+                    <textarea rows="4" cols="50" class="form-control" id="message" name="message" [(ngModel)] = "message">
+                    </textarea>
+        
+                    <p>Best, </p>
+                    <label for="fName" class="text-white">First Name</label>
+                    <input type="text" class="form-control" id="fName" name="fName" [(ngModel)] = "fName">
+        
+                    <label for="lName" class="text-white">Last Name</label>
+                    <input type="text" class="form-control" id="lName" name="lName" [(ngModel)] = "lName">
+        
+                    <label for="emailID" class="text-white">Email ID</label>
+                    <input type="email" class="form-control" id="emailID" name="emailID" [(ngModel)] = "emailID">
+                    <br>
+                    <input type="submit" value="Thank You!" name="submit">
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            Contacts
+        </div>
+    </div>
+    </body>
+</html>

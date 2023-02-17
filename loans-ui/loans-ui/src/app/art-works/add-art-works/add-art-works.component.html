@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Image Uploading</title>
+</head>
+
+<body style="background-color: black">
+	
+	<div id="mainContent">
+		<div id="uploadTitle">Upload Image Form</div>
+		<div id="formContent">
+			
+			<form #uploadForm = "ngForm" enctype="multipart/form-data" (submit) = "onSubmit(uploadForm)">
+				<div class="form-group">
+					<label for="imgName">Image Title</label>
+					<input type="text" class="form-control" id="imgName" name="name" [(ngModel)] = "name" placeholder="Eg. Acrylic painting..">
+				</div><br>
+				<div class="form-group">
+					<label for="imgDesc">Image Description</label>
+					<textarea class="form-control" id="imgDesc" rows="3" name="description" [(ngModel)] = "description"></textarea>
+					<small id="emailHelp" class="form-text text-muted">Info like artist name, size, medium, texture, etc. can be added.</small>
+				</div><br>
+				<div class="row">
+					<div class="form-group col-md-4">
+						<label for="inputCategory">Art Category</label>
+						<select id="inputCategory" class="form-select">
+						  <option selected>Choose a category</option>
+						  <option value="Charcoal Portrait" class="dropdown-item">Charcoal Portrait</option>
+						  <option value="Color Portrait" class="dropdown-item">Color Portrait</option>
+						  <option value="Acrylic Painting" class="dropdown-item">Acrylic Painting</option>
+						  <option value="Others" class="dropdown-item">Others</option>
+						</select>
+					</div>
+					<div class="form-group col-md-6">
+						<label for="imgUpload">Upload Image</label>
+						<input type="file" (change)="this.onFilechange($event)" class="form-control" id="imgUpload" name="image" >
+					</div>
+				</div><br>
+				
+				<div>
+					<button class="btn btn-primary " type="submit">Upload Image</button>
+					<div *ngIf="selectedFile.pending" class="img-loading-overlay">
+						<div class="img-spinning-circle"></div>
+					</div><br>
+					<div *ngIf="selectedFile.status === 'ok'" class="text-success" style="font-size: 20px;"> Image Uploaded Succesfuly!</div>
+					<div *ngIf="selectedFile.status === 'fail'" class="alert alert-danger"> Image Upload Failed!</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	</body>
+</html>	
